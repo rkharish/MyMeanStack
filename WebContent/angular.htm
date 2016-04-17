@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Angular JS project!</title>
+</head>
+
+<body style="background-color:pink" ng-app="car-app" ng-controller="carController">
+<center>
+<img src="angular.png" style="height: 100px;">
+<hr>
+</center>
+Enter your Car name here : <input type="text" name="carname" ng-model="carname" ng-keyup="checkCar();"/>
+
+<button  style="background-color: red;" ng-click="buttonClick();">GO!</button>
+<div ng-show="datashow">
+<img ng-src="img/{{newcar.photo}}" style="border-radius:50%;">
+<br>
+Model : <span style="color:blue;font-size:14px;" ng-bind="newcar.model"></span> 
+<br>
+Brand : <span style="color:blue;font-size:14px;" ng-bind="newcar.brand"></span>
+<br>
+Year : <span style="color:blue;font-size:14px;" ng-bind="newcar.year"></span>
+<br>
+Price : <span style="color:blue;font-size:14px;" ng-bind="newcar.price"></span>
+</div>
+
+
+<hr>
+<h2 style="color:red;font-weight:bold;" >Car name called using h2 and {} : {{carname}}</h2>
+<hr>
+Car name called using span + ng-binding : <span style="color:black;font-weight:bold " ng-bind="carname">This will be changed when car name is typed</span>
+<hr>
+Possibilities - value set in app.js : <input type="text" name="pname" ng-model="pname"/>
+<hr>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+ 	<script src = "js/car.js"></script>
+ 	<script src = "js/app.js"></script>
+ 	<script src = "js/service.js"></script>
+ 	<script src = "js/controller.js"></script>
+</body>
+
+</html>
